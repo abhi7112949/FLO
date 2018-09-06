@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1> My flo address</h1>
+ <p id="flo_addr">{{new_address}}</p>
+ <form method="POST" action="">
+     <div class="forms-group">
+         {{ form.submit(class="btn btn-outline-info") }}
+    </div>
+</form>
+<br><br><br><br>
+
+<h1>Private Key  </h1>
+ <form method="POST" action="">
+     <div class="form-group">
+         {{ form.address.label(class="form-control-label") }}
+         {{ form.address(class="form-control form-control-lg") }}
+    </div>
+</form>
+<button class="btn btn-success" id="new_pvt"> Get Private key </button>
+<h4>Private Key of above address is: </h4> <p id="pk">pvt_key</p>
+{% endblock content %}
