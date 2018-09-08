@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Private Key  </h1>
+ <form method="POST" action="">
+      {{ form.hidden_tag() }}
+     <div class="form-group">
+         {{ form.address.label(class="form-control-label") }}
+         {{ form.address(class="form-control form-control-lg") }}<br>
+<h4>Private Key of above address is: </h4><br>
+        <div class="form-control form-control-lg">
+            {{pvt_key}}
+        </div><br>
+{{ form.submit_pvt(class="btn btn-outline-info") }}
+</div>
+</form>
+{% endblock content %}
